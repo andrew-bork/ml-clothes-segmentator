@@ -4,11 +4,15 @@ import numpy as np
 i = 1
 
 bruh = np.zeros(1003)
-
+"""
+Label valid face images
+Press y - to confirm
+Press n - to declare not valid.
+"""
 while i < 47:
     img = cv.imread(f"./clothing-co-parsing/cropped/{i:04d}.jpg")
     while True:
-        cv.imshow("fuck", img)
+        cv.imshow("image", img)
         poll = cv.waitKey(10)
         if(poll == ord("y")):
             print(f"{i:04d} is valid.")
